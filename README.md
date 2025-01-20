@@ -37,7 +37,7 @@ A modern, responsive Twitter clone built with pure HTML, CSS and JavaScript. Thi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/twitter-clone.git
+git clone https://github.com/paulomunizdev/twitter-clone.git
 ```
 
 2. Navigate to the project directory:
