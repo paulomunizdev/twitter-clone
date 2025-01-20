@@ -45,7 +45,7 @@ git clone https://github.com/paulomunizdev/twitter-clone.git
 cd twitter-clone
 ```
 
-3. Open `index.html` in your browser or use a local server:
+3. Open `home.html` in your browser or use a local server:
 ```bash
 # Using Python
 python -m http.server 8000
