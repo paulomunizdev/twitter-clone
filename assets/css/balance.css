@@ -1,0 +1,279 @@
+/* Balance Overview */
+.balance-overview {
+    background: linear-gradient(to right, rgba(255, 165, 0, 0.05), rgba(255, 215, 0, 0.05));
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 165, 0, 0.1);
+}
+
+.balance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--twitter-text);
+}
+
+.balance-amount i {
+    color: #f7931a;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.info-value {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Deposit Address Section */
+.deposit-address {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    padding: 24px;
+    background: var(--twitter-background);
+    border-radius: 16px;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--twitter-border);
+}
+
+.qr-code img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.address-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.address-notice {
+    color: var(--twitter-secondary);
+    font-size: 0.95rem;
+}
+
+.address-copy {
+    display: flex;
+    gap: 12px;
+}
+
+.address-input {
+    flex: 1;
+    padding: 12px;
+    background: white;
+    border: 1px solid var(--twitter-border);
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--twitter-text);
+    cursor: text;
+}
+
+.address-warning {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(244, 33, 46, 0.1);
+    border-radius: 8px;
+    color: var(--twitter-danger);
+}
+
+.address-warning i {
+    font-size: 1.2rem;
+}
+
+.address-warning p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Transaction History */
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: var(--twitter-background);
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.transaction-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.transaction-status {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.transaction-status.confirmed {
+    color: #00a000;
+}
+
+.transaction-status.pending {
+    color: #f7931a;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+}
+
+.transaction-date {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.transaction-id {
+    font-size: 0.9rem;
+    color: var(--twitter-secondary);
+    margin-top: 4px;
+}
+
+.tx-link {
+    color: var(--twitter-blue);
+    text-decoration: none;
+    font-family: monospace;
+}
+
+.tx-link:hover {
+    text-decoration: underline;
+}
+
+.transaction-amount {
+    text-align: right;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.transaction-amount.positive {
+    color: #00a000;
+}
+
+.confirmations {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.view-all-transactions {
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* Important Notes */
+.deposit-notes {
+    padding: 24px;
+    background: var(--twitter-background);
+    border-radius: 16px;
+}
+
+.deposit-notes h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.1rem;
+}
+
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notes-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: var(--twitter-secondary);
+}
+
+.notes-list i {
+    color: var(--twitter-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .deposit-address {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .qr-code {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .balance-info {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+    }
+
+    .transaction-amount {
+        text-align: left;
+        width: 100%;
+        padding-top: 12px;
+        border-top: 1px solid var(--twitter-border);
+    }
+}
+
+@media (max-width: 480px) {
+    .balance-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .qr-code {
+        width: 160px;
+        height: 160px;
+    }
+
+    .address-copy {
+        flex-direction: column;
+    }
+}

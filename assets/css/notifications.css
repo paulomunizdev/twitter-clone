@@ -1,0 +1,365 @@
+/* Layout específico da página de notificações */
+.feed-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feed-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.feed-header-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Botão Mark all read */
+.feed-mark-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feed-mark-all:hover {
+    background: var(--background-hover);
+}
+
+/* Filtros de notificações */
+.feed-filters {
+    display: flex;
+    gap: 4px;
+    padding: 4px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feed-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.feed-filter {
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.feed-filter:hover {
+    color: var(--primary-color);
+}
+
+.feed-filter.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 600;
+}
+.feed-filter {
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.feed-filter i {
+    margin-right: 4px;
+    font-size: 0.9rem;
+}
+
+.feed-filter:hover {
+    color: var(--primary-color);
+    background-color: var(--background-hover);
+}
+
+.feed-filter.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feed-filter {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feed-filters {
+        gap: 2px;
+    }
+
+    .feed-filter {
+        padding: 8px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .feed-filter i {
+        margin-right: 3px;
+    }
+}
+
+/* Lista de notificações */
+.feed-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-item {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.feed-item:hover {
+    background: var(--background-hover);
+}
+
+.feed-item.unread {
+    background: var(--background-light);
+}
+
+/* Ícone da notificação */
+.feed-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed-icon i {
+    font-size: 1.25rem;
+}
+
+.feed-icon.like { color: var(--danger-color); }
+.feed-icon.retweet { color: var(--success-color); }
+.feed-icon.mention,
+.feed-icon.follow { color: var(--primary-color); }
+
+/* Conteúdo da notificação */
+.feed-content {
+    flex: 1;
+}
+
+.feed-content-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.feed-text {
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.feed-tweet {
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--background-light);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Loading spinner */
+.feed-loading {
+    display: none;
+    justify-content: center;
+    padding: 20px;
+    color: var(--text-secondary);
+}
+
+.feed-loading.active {
+    display: flex;
+}
+
+/* Cards de estatísticas */
+.feed-stats {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.feed-stats-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background: var(--background-light);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* Activity List */
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.activity-item:hover {
+    background-color: var(--background-light);
+}
+
+.activity-item i {
+    width: 16px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.activity-item span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Status colors */
+.text-success { color: var(--success-color); }
+.text-primary { color: var(--primary-color); }
+.text-danger { color: var(--danger-color); }
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .activity-item {
+        padding: 10px;
+    }
+    
+    .activity-item span {
+        font-size: 0.85rem;
+    }
+}
+
+/* Toast de mensagem */
+.feed-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, 20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, 0); 
+    }
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .feed-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .feed-filters {
+        margin-top: 8px;
+    }
+
+    .feed-item {
+        padding: 12px;
+    }
+
+    .feed-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .feed-filter {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feed-toast {
+        width: 90%;
+        left: 5%;
+        transform: none;
+    }
+}

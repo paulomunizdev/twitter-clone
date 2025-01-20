@@ -1,0 +1,686 @@
+/* Panel Layout */
+.panel-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    min-height: calc(100vh - 64px);
+}
+
+/* Balance Info */
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.balance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: var(--twitter-background);
+    border-radius: 8px;
+}
+
+.balance-label {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.balance-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+.balance-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+/* Panel Navigation */
+.panel-nav {
+    background: white;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 16px;
+}
+
+.panel-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--twitter-text);
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.panel-nav-link:hover {
+    background-color: var(--twitter-hover);
+    color: var(--twitter-blue);
+}
+
+.panel-nav-link.active {
+    color: var(--twitter-blue);
+    font-weight: 600;
+}
+
+.panel-nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+
+/* Account Status */
+.account-status {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: var(--box-shadow);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    color: var(--twitter-secondary);
+}
+
+.status-item i {
+    color: #4CAF50;
+    width: 20px;
+    text-align: center;
+}
+
+.status-item.vip i {
+    color: var(--vip-gold);
+}
+
+/* Panel Content */
+.panel-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--twitter-border);
+    background: white;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.panel-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-subtitle {
+    color: var(--twitter-secondary);
+    font-size: 0.95rem;
+}
+
+.panel-section {
+    padding: 24px;
+}
+
+/* Profile Header */
+.profile-header {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.profile-banner-upload {
+    position: relative;
+}
+
+.banner-preview {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--twitter-background);
+}
+
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.upload-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.banner-preview:hover .upload-overlay {
+    opacity: 1;
+}
+
+.upload-tip {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Profile Avatar */
+.profile-avatar-upload {
+    position: absolute;
+    bottom: -40px;
+    left: 24px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Quick Stats */
+.profile-quick-stats {
+    display: flex;
+    gap: 24px;
+    margin-left: 160px;
+    margin-top: 12px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+/* Form Layout */
+.settings-group {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.settings-group:first-child {
+    padding-top: 0;
+}
+
+.settings-group h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--twitter-secondary);
+}
+
+.form-input.with-icon {
+    padding-left: 36px;
+}
+
+/* Settings Options */
+.settings-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px;
+    background: var(--twitter-background);
+    border-radius: 12px;
+}
+
+.option-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.option-info p {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--twitter-blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Form Actions */
+.form-actions {
+    padding-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Danger Zone */
+.danger-zone {
+    margin-top: 32px;
+    padding: 24px;
+    background: #FFF5F5;
+    border-radius: 16px;
+}
+
+.danger-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.danger-header i {
+    color: var(--twitter-danger);
+    font-size: 1.2rem;
+}
+
+.danger-header h2 {
+    color: var(--twitter-danger);
+    margin: 0;
+}
+
+.danger-zone p {
+    color: var(--twitter-secondary);
+    margin-bottom: 20px;
+}
+
+.danger-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-outline-danger {
+    color: var(--twitter-danger);
+    border: 1px solid var(--twitter-danger);
+    background: transparent;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--twitter-danger-hover);
+}
+
+/* Hide Submit Buttons for Upload Forms */
+.upload-submit {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .panel-layout {
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .panel-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .panel-sidebar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+    }
+
+    .profile-quick-stats {
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .profile-avatar-upload {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .profile-quick-stats {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .danger-actions {
+        flex-direction: column;
+    }
+
+    .settings-option {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .switch {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .balance-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-header {
+        padding: 16px;
+    }
+
+    .panel-section {
+        padding: 16px;
+    }
+
+    .banner-preview {
+        height: 150px;
+    }
+
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-quick-stats {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .stat-item {
+        flex: 0 0 calc(50% - 12px);
+        align-items: center;
+    }
+}
+
+/* Blocked Accounts Section */
+.blocked-accounts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blocked-count {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.blocked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blocked-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--twitter-background);
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.blocked-account:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.account-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.account-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.account-handle {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blocked-account {
+        padding: 12px;
+    }
+
+    .account-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blocked-accounts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .account-name {
+        font-size: 0.95rem;
+    }
+    
+    .account-handle {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* Estilo para o preview do banner */
+.banner-preview {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--twitter-background);
+    transition: background-image 0.3s ease;
+}
+
+/* Overlay ao passar o mouse */
+.upload-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+/* Mostrar overlay ao passar o mouse */
+.banner-preview:hover .upload-overlay,
+.avatar-container:hover .upload-overlay {
+    opacity: 1;
+}
+
+/* Estilo para o container do avatar */
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.2s ease;
+}
+
+/* Upload overlay para o avatar */
+.avatar-container .upload-overlay {
+    font-size: 0.9rem;
+}
+
+.avatar-container:hover {
+    transform: scale(1.02);
+}
+
+/* Esconder inputs de arquivo */
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Estilo para o ícone da câmera */
+.upload-overlay i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* Texto de dica para upload */
+.upload-tip {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Esconder botões de submit */
+.upload-submit {
+    display: none;
+}

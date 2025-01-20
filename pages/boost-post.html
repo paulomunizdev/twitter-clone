@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boost Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/post.css">
+    <link rel="stylesheet" href="../assets/css/boost-post.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo Section -->
+                <a href="/" class="brand">
+                    <svg class="nav-logo" viewBox="0 0 4160 4160" xmlns="http://www.w3.org/2000/svg">
+                        <path transform="translate(4160, 4160) rotate(180)" d="M180 4161 c0 -51 68 -277 110 -363 25 -52 25 -53 -5 -146 -13 -42
+        -29 -106 -35 -142 -15 -96 -12 -292 6 -394 l15 -88 -59 -62 c-32 -33 -72 -86
+        -89 -116 -125 -219 -148 -644 -58 -1049 44 -201 79 -309 225 -711 59 -162 142
+        -398 184 -524 82 -247 174 -452 226 -504 44 -45 74 -42 125 11 47 50 128 170
+        201 299 27 49 53 88 57 88 5 0 8 -44 7 -97 -2 -128 -2 -123 14 -123 40 0 191
+        208 316 435 252 460 447 983 505 1360 25 158 30 373 12 490 -31 201 -91 334
+        -200 448 l-58 61 10 79 c28 210 3 454 -60 579 l-28 56 34 75 c56 122 97 329
+        63 314 -7 -3 -54 -24 -105 -47 -104 -46 -244 -84 -365 -100 -183 -23 -580 -7
+        -720 29 -74 19 -184 68 -280 125 -27 15 -48 23 -48 17z m399 -587 c39 -34 40
+        -37 26 -57 -52 -74 42 -159 104 -93 l22 24 52 -21 c29 -12 54 -23 56 -24 9 -6
+        -36 -46 -71 -64 -42 -21 -130 -25 -175 -8 -73 27 -123 117 -123 220 0 36 3 68
+        6 72 11 10 61 -14 103 -49z m882 24 c5 -93 -10 -155 -49 -207 -66 -89 -222
+        -93 -301 -8 -23 25 -23 27 -5 32 10 4 37 13 58 21 37 13 40 13 64 -11 60 -61
+        143 3 106 81 -20 41 -13 52 55 96 58 36 71 36 72 -4z m-440 -327 c27 -26 49
+        -57 49 -67 0 -21 -100 -204 -112 -204 -9 0 -108 186 -108 204 0 20 91 116 110
+        116 7 0 35 -22 61 -49z" />
+                    </svg>
+                </a>
+
+                <!-- Search Section -->
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="search-input" placeholder="Search">
+                    <div class="search-suggestions">
+                        <div class="suggestion-item">
+                            <i class="fas fa-history"></i>
+                            <span>Recent search 1</span>
+                        </div>
+                        <div class="suggestion-item">
+                            <i class="fas fa-history"></i>
+                            <span>Recent search 2</span>
+                        </div>
+                        <div class="suggestion-item">
+                            <i class="fas fa-trending-up"></i>
+                            <span>Trending: Technology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Items -->
+                <div class="nav-items">
+                    <!-- Notifications -->
+                    <div class="notification-item">
+                        <div class="notification-container">
+                            <input type="checkbox" id="notification-toggle" class="notification-toggle">
+                            <label for="notification-toggle" class="notification-link">
+                                <i class="fas fa-bell"></i>
+                                <span class="notification-badge">3</span>
+                            </label>
+                            <div class="notification-menu">
+                                <div class="notification-header">
+                                    <i class="fas fa-bell"></i>
+                                    <span>My Notifications</span>
+                                    <button class="mark-all-read" title="Mark all as read">
+                                        <i class="fas fa-check-double"></i>
+                                    </button>
+                                </div>
+                                <div class="notification-list">
+                                    <a href="#" class="notification-option new">
+                                        <div class="notification-icon">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="notification-text">
+                                            <p class="notification-title">Special Promotion</p>
+                                            <p class="notification-description">Get 20% off on selected products</p>
+                                            <span class="notification-time">2 min ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="notification-option">
+                                        <div class="notification-icon warning">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="notification-text">
+                                            <p class="notification-title">Storage Alert</p>
+                                            <p class="notification-description">Your storage is almost full</p>
+                                            <span class="notification-time">1 hour ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="notification-option">
+                                        <div class="notification-icon danger">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div class="notification-text">
+                                            <p class="notification-title">Security</p>
+                                            <p class="notification-description">New login detected on your device</p>
+                                            <span class="notification-time">2 hours ago</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notification-footer">
+                                    <a href="/notifications">See all notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Menu -->
+                    <div class="nav-item user-menu">
+                        <input type="checkbox" id="user-menu-toggle" class="menu-toggle">
+                        <label for="user-menu-toggle" class="user-menu-button">
+                            <img src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario" alt="Avatar" class="user-avatar">
+                            <span class="user-name">Mario Bros</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </label>
+
+                        <div class="dropdown-menu">
+                            <div class="menu-header">
+                                <img src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario" alt="Avatar" class="menu-avatar">
+                                <div class="menu-user-info">
+                                    <span class="menu-name">Mario Bros</span>
+                                    <span class="menu-handle">@mario</span>
+                                </div>
+                            </div>
+
+                            <div class="menu-items">
+                                <a href="profile.html" class="menu-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Profile</span>
+                                </a>
+                                <a href="vip.html" class="menu-item">
+                                    <i class="fas fa-crown"></i>
+                                    <span>VIP</span>
+                                    <span class="badge-new">New</span>
+                                </a>
+                                <a href="settings.html" class="menu-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="notifications.html" class="menu-item">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Notifications</span>
+                                </a>
+                                <a href="privacy.html" class="menu-item">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Privacy</span>
+                                </a>
+                                <a href="balance.html" class="menu-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Balance</span>
+                                </a>
+                                <div class="menu-divider"></div>
+                                <a href="#" class="menu-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help</span>
+                                </a>
+                                <a href="#" class="menu-item text-danger">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="layout">
+                <!-- Left Sidebar -->
+                <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                        <a href="/" class="sidebar-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="/explore" class="sidebar-link">
+                            <i class="fas fa-hashtag"></i>
+                            <span>Explore</span>
+                        </a>
+                        <a href="/notifications" class="sidebar-link">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </a>
+                        <a href="/profile" class="sidebar-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <button class="btn btn-tweet">
+                            <span>Tweet</span>
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- Header -->
+                    <div class="post-header">
+                        <a href="javascript:history.back()" class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h2>Boost Post</h2>
+                    </div>
+
+                    <!-- Original Post -->
+                    <article class="tweet vip">
+                        <img class="avatar" src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Peach"
+                            alt="Princesa Peach">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="tweet-name">Princesa Peach</span>
+                                <i class="fas fa-check-circle verified-badge-vip"></i>
+                                <span class="vip-badge">
+                                    <i class="fas fa-crown"></i>
+                                    VIP
+                                </span>
+                                <span class="tweet-username">@peach</span>
+                                <span class="tweet-time">· 4h</span>
+                            </div>
+                            <p>Organizando uma festa real no castelo hoje! Todos estão convidados! 👑🌸 Agradecimento
+                                especial ao @toad pelos incríveis arranjos de bolo! #CasteloPeach #ReinoDoCogumelo</p>
+                            <div class="post-media">
+                                <img src="https://static.vecteezy.com/system/resources/previews/045/547/924/non_2x/cat-astronaut-in-outer-space-for-twitter-header-editor_template.jpeg"
+                                    alt="Post image" class="post-image">
+                            </div>
+                            <div class="tweet-actions-list">
+                                <button class="tweet-action-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>445</span>
+                                </button>
+                                <button class="tweet-action-button">
+                                    <i class="fas fa-retweet"></i>
+                                    <span>678</span>
+                                </button>
+                                <button class="tweet-action-button">
+                                    <i class="far fa-heart"></i>
+                                    <span>100</span>
+                                </button>
+                                <button class="tweet-action-button">
+                                    <i class="fas fa-rocket"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Boost Options Section -->
+                    <section class="boost-options">
+                        <h3 class="boost-title">Boost Settings</h3>
+
+                        <!-- Boost Duration -->
+                        <div class="boost-setting">
+                            <label class="setting-label">Duration</label>
+                            <div class="duration-options">
+                                <input type="radio" name="duration" id="duration-24" value="24" checked>
+                                <label for="duration-24" class="duration-option">
+                                    <span class="duration-time">24 hours</span>
+                                    <span class="duration-price">₿ 0.000026</span>
+                                </label>
+
+                                <input type="radio" name="duration" id="duration-48" value="48">
+                                <label for="duration-48" class="duration-option">
+                                    <span class="duration-time">48 hours</span>
+                                    <span class="duration-price">₿ 0.000052</span>
+                                </label>
+
+                                <input type="radio" name="duration" id="duration-72" value="72">
+                                <label for="duration-72" class="duration-option">
+                                    <span class="duration-time">72 hours</span>
+                                    <span class="duration-price">₿ 0.000086</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Target Audience -->
+                        <div class="boost-setting">
+                            <label class="setting-label">Target Audience</label>
+                            <select class="boost-select">
+                                <option value="all">All Users</option>
+                                <option value="followers">My Followers</option>
+                            </select>
+                        </div>
+
+                        <!-- Budget Display -->
+                        <div class="boost-budget">
+                            <div class="budget-info">
+                                <span class="budget-label">Total Budget:</span>
+                                <span class="budget-amount">₿ 0.0001</span>
+                            </div>
+                            <div class="wallet-balance">
+                                <i class="fab fa-bitcoin"></i>
+                                Available: ₿ 0.0245
+                            </div>
+                        </div>
+
+                        <!-- Boost Action -->
+                        <div class="boost-actions">
+                            <button class="btn btn-outline">Cancel</button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-rocket"></i>
+                                Boost Now
+                            </button>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- Right Sidebar -->
+                <aside class="right-sidebar">
+                    <!-- Boost Tips -->
+                    <div class="who-to-follow">
+                        <h2>Boost Tips</h2>
+                        <div class="boost-tips">
+                            <div class="tip-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Best time to boost: 6PM - 9PM</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-users"></i>
+                                <p>Target relevant audiences for better engagement</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-hashtag"></i>
+                                <p>Use trending hashtags to increase visibility</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <!-- Boost Analytics -->
+                    <div class="who-to-follow">
+                        <h2>Previous Boosts</h2>
+                        <div class="boost-analytics">
+                            <div class="analytics-item">
+                                <span class="analytics-label">Average Reach</span>
+                                <span class="analytics-value">12.5k views</span>
+                            </div>
+                            <div class="analytics-item">
+                                <span class="analytics-label">Engagement Rate</span>
+                                <span class="analytics-value">4.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/btn-post.js"></script>
+    <script src="../assets/js/btnFollow.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/post.js"></script>
+    <script src="../assets/js/boost-post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+/* Section Headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.active-count,
+.history-count {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    background: var(--twitter-background);
+    border-radius: 12px;
+}
+
+/* Wallet Section */
+.boost-wallet {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wallet-balance {
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    background: var(--twitter-background);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wallet-balance i {
+    color: #f7931a;
+}
+
+/* Boost Cards */
+.active-boosts-list,
+.boost-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.boost-card {
+    background: white;
+    border: 1px solid var(--twitter-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.boost-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Indicators */
+.boost-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.boost-card.active .status-indicator {
+    color: #00a651;
+}
+
+.boost-card.active .status-indicator i {
+    font-size: 0.8rem;
+}
+
+.boost-card.history .status-indicator {
+    color: var(--twitter-secondary);
+}
+
+.boost-timer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.boost-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.boost-duration {
+    font-weight: 500;
+}
+
+.boost-date {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+}
+
+/* Post Preview */
+.post-preview {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.post-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.author-name {
+    font-weight: 600;
+}
+
+.author-handle {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.post-time {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+}
+
+.post-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+
+/* Stats Section */
+.boost-stats {
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+    border-bottom: 1px solid var(--twitter-border);
+    background: var(--twitter-background);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.stat-item i {
+    color: var(--twitter-secondary);
+    font-size: 1.1rem;
+}
+
+.stat-item.primary i {
+    color: var(--twitter-blue);
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+    margin-left: 4px;
+}
+
+.stat-change {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.85rem;
+    margin-left: auto;
+}
+
+.stat-change.positive {
+    color: #00a651;
+}
+
+.stat-change.negative {
+    color: #dc3545;
+}
+
+/* Actions Section */
+.boost-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.boost-rate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rate-label {
+    color: var(--twitter-secondary);
+    font-size: 0.9rem;
+}
+
+.rate-value {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--twitter-text);
+}
+
+/* Load More Button */
+.section-footer {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.btn-load-more {
+    padding: 12px 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .boost-wallet {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .calculator-options {
+        grid-template-columns: 1fr;
+    }
+
+    .boost-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .boost-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .action-buttons {
+        width: 100%;
+    }
+
+    .action-buttons .btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-preview {
+        flex-direction: column;
+    }
+
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .boost-info {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .wallet-balance {
+        font-size: 0.9rem;
+    }
+
+    .stat-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stat-change {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+}
+
+/* Animation for Loading States */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.boost-card.loading {
+    animation: pulse 1.5s infinite;
+    pointer-events: none;
+}

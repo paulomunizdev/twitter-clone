@@ -1,0 +1,134 @@
+/* Formulário de Tweet */
+.tweet-form {
+    padding: 16px;
+    background: white;
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.tweet-textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 1.25rem;
+    font-family: inherit;
+    margin-bottom: 16px;
+    outline: none;
+    padding: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.tweet-textarea:focus {
+    border-bottom-color: var(--twitter-blue);
+}
+
+.tweet-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--twitter-border);
+}
+
+.tweet-icon {
+    color: var(--twitter-blue);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tweet-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Customizações específicas de Tweet */
+.tweet:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tweet.vip {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.05), white);
+    border-left: 3px solid var(--vip-gold);
+}
+
+.tweet.vip:hover {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.8));
+}
+
+.tweet:hover .avatar {
+    transform: scale(1.05);
+}
+
+.tweet.vip .avatar {
+    border: 2px solid var(--vip-gold);
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.2);
+}
+
+/* Botões específicos */
+.btn-tweet {
+    background: var(--twitter-blue);
+    color: white;
+    padding: 16px 32px;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(29, 161, 242, 0.2);
+}
+
+.btn-tweet:hover {
+    background-color: var(--twitter-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.3);
+}
+
+/* Layout específico da página */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+
+.who-to-follow {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: var(--box-shadow);
+    margin-top: 20px; /* Adiciona espaçamento acima */ 
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo */
+}
+
+/* Responsividade específica */
+@media (max-width: 1200px) {
+    .btn-tweet span {
+        display: none;
+    }
+
+    .btn-tweet {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-tweet::after {
+        content: '+';
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        border-radius: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+}

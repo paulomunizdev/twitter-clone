@@ -1,0 +1,227 @@
+.hashtag-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--twitter-border);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.back-button {
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--twitter-text);
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: var(--twitter-hover);
+}
+
+.hashtag-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.hashtag-stats {
+    display: flex;
+    gap: 16px;
+    color: var(--twitter-secondary);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.trend-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--twitter-blue);
+}
+
+/* Tabs de Navegação */
+.hashtag-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--twitter-border);
+    background: white;
+    position: sticky;
+    top: 73px;
+    z-index: 9;
+}
+
+.hashtag-tabs .tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    color: var(--twitter-secondary);
+    text-decoration: none;
+    position: relative;
+}
+
+.hashtag-tabs .tab-item:hover {
+    background-color: var(--twitter-hover);
+    color: var(--twitter-blue);
+}
+
+.hashtag-tabs .tab-item.active {
+    color: var(--twitter-text);
+    font-weight: 600;
+}
+
+.hashtag-tabs .tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--twitter-blue);
+    border-radius: 4px 4px 0 0;
+}
+
+/* Cards informativos */
+.hashtag-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.hashtag-card h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.hashtag-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.info-item i {
+    color: var(--twitter-secondary);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.info-label {
+    display: block;
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+}
+
+.info-value {
+    display: block;
+    font-weight: 500;
+}
+
+/* Related Hashtags */
+.related-hashtags {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.related-hashtags h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.related-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 8px 8px 0;
+    background-color: var(--twitter-hover);
+    color: var(--twitter-blue);
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+}
+
+.related-tag:hover {
+    background-color: rgba(29, 161, 242, 0.2);
+}
+
+/* Load More Button */
+.load-more {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: var(--twitter-blue);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.load-more:hover {
+    background-color: var(--twitter-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hashtag-header {
+        padding: 12px;
+    }
+
+    .hashtag-title {
+        font-size: 1.3rem;
+    }
+
+    .hashtag-tabs .tab-item {
+        padding: 12px 8px;
+    }
+
+    .hashtag-card,
+    .related-hashtags {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hashtag-header {
+        padding: 8px 12px;
+    }
+
+    .hashtag-title {
+        font-size: 1.2rem;
+    }
+
+    .hashtag-tabs .tab-item {
+        padding: 12px 4px;
+        font-size: 0.9rem;
+    }
+
+    .hashtag-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .info-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tweet button customization */
+.btn-tweet {
+    background-color: var(--twitter-blue);
+    color: white;
+}
+
+.btn-tweet:hover {
+    background-color: var(--twitter-blue-hover);
+}

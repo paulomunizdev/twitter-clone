@@ -1,0 +1,257 @@
+/* Header e Navegação */
+.explore-header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.explore-title {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-title h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.settings-btn {
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--twitter-text);
+}
+
+.settings-btn:hover {
+    background-color: var(--twitter-hover);
+}
+
+.explore-filters {
+    border-bottom: 1px solid var(--twitter-border);
+}
+
+.filter-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.filter-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-tab {
+    padding: 16px;
+    color: var(--twitter-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.filter-tab:hover {
+    background-color: var(--twitter-hover);
+    color: var(--twitter-blue);
+}
+
+.filter-tab.active {
+    color: var(--twitter-text);
+    font-weight: 600;
+    border-bottom-color: var(--twitter-blue);
+}
+
+/* Seções de Trending */
+.trending-section {
+    border-bottom: 1px solid var(--twitter-border);
+    padding-bottom: 8px;
+}
+
+.section-header {
+    padding: 16px 16px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title i {
+    color: var(--twitter-blue);
+}
+
+.section-subtitle {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+}
+
+/* Lista de Trends */
+.trend-item {
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid var(--twitter-border);
+    transition: background-color 0.2s;
+}
+
+.trend-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.trend-item.highlight {
+    background: linear-gradient(to right, rgba(29, 161, 242, 0.1), white);
+}
+
+.trend-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.trend-rank {
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+}
+
+.trend-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--twitter-text);
+    margin: 0;
+}
+
+.trend-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--twitter-secondary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.trend-status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--twitter-blue);
+}
+
+
+/* Categorias no Sidebar */
+.trending-categories {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.trending-categories h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--twitter-text);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.category-item:hover {
+    background-color: var(--twitter-hover);
+}
+
+.category-item i {
+    color: var(--twitter-blue);
+    width: 20px;
+    text-align: center;
+}
+
+.category-count {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--twitter-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .explore-title {
+        padding: 12px;
+    }
+
+    .explore-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .filter-tab {
+        padding: 12px;
+    }
+
+    .section-header {
+        padding: 12px 12px 8px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .trend-item {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-title h1 {
+        font-size: 1.2rem;
+    }
+
+    .filter-tab {
+        padding: 8px 12px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .trend-title {
+        font-size: 1rem;
+    }
+}
+
+/* Tweet button customization */
+.btn-tweet {
+    background-color: var(--twitter-blue);
+    color: white;
+}
+
+.btn-tweet:hover {
+    background-color: var(--twitter-blue-hover);
+}
+
+

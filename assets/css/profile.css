@@ -1,0 +1,120 @@
+/* Sidebar customization */
+.sidebar-link:hover {
+    background-color: var(--twitter-hover);
+}
+
+.sidebar-link.active {
+    font-weight: 700;
+    color: var(--twitter-blue);
+}
+
+/* Profile customization */
+.profile-banner {
+    background-color: var(--twitter-blue);
+}
+
+.profile-avatar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar:hover {
+    filter: brightness(0.95);
+}
+
+/* Follow button customization */
+.follow-btn {
+    background-color: var(--twitter-text);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.follow-btn:hover {
+    background-color: rgba(15, 20, 25, 0.85);
+}
+
+.follow-toggle:checked + .follow-btn {
+    background-color: white;
+    color: var(--twitter-text);
+    border: 1px solid var(--twitter-border);
+}
+
+.follow-toggle:checked + .follow-btn:hover {
+    border-color: var(--twitter-danger);
+    color: var(--twitter-danger);
+    background-color: var(--twitter-danger-hover);
+}
+
+/* Options menu customization */
+.options-btn {
+    border: 1px solid var(--twitter-border);
+    background: transparent;
+}
+
+.options-btn:hover {
+    background-color: var(--twitter-hover);
+}
+
+.options-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--twitter-border);
+}
+
+.options-toggle:checked + .options-btn {
+    background-color: var(--twitter-hover);
+}
+
+.option-item {
+    color: var(--twitter-text);
+}
+
+.option-item:hover {
+    background-color: var(--twitter-background);
+}
+
+.option-item.danger {
+    color: var(--twitter-danger);
+}
+
+.option-item.danger:hover {
+    background-color: var(--twitter-danger-hover);
+}
+
+/* Stats customization */
+.stat-link:hover {
+    color: var(--twitter-blue);
+}
+
+/* Tweet customization */
+.tweet:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Who to follow customization */
+.who-to-follow {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.follow-button {
+    border: 1px solid var(--twitter-border);
+    background: white;
+    color: var(--twitter-text);
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.follow-button:hover {
+    background-color: var(--twitter-background);
+}
+
+/* Tweet button customization */
+.btn-tweet {
+    background-color: var(--twitter-blue);
+    color: white;
+}
+
+.btn-tweet:hover {
+    background-color: var(--twitter-blue-hover);
+}

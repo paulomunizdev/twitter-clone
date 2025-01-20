@@ -1,0 +1,126 @@
+/* VIP Scrollbar Theme - Enhanced Version */
+:root {
+    /* Cores VIP Refinadas */
+    --vip-gold-light: #FFD700;
+    --vip-gold-medium: #DAA520;
+    --vip-gold-dark: #B8860B;
+    --vip-accent: #FFA500;
+    
+    /* Gradientes VIP */
+    --vip-gradient-normal: linear-gradient(135deg, var(--vip-gold-medium) 0%, var(--vip-gold-light) 50%, var(--vip-gold-medium) 100%);
+    --vip-gradient-hover: linear-gradient(135deg, var(--vip-gold-light) 0%, var(--vip-accent) 50%, var(--vip-gold-light) 100%);
+    --vip-gradient-active: linear-gradient(135deg, var(--vip-accent) 0%, var(--vip-gold-light) 50%, var(--vip-accent) 100%);
+    
+    /* Efeitos */
+    --vip-glow: 0 0 15px rgba(255, 215, 0, 0.3);
+    --vip-glow-hover: 0 0 20px rgba(255, 215, 0, 0.5);
+    
+    /* Dimensões */
+    --scrollbar-width: 12px;
+    --scrollbar-width-hover: 14px;
+    --scrollbar-min-height: 50px;
+  }
+  
+  /* Webkit Scrollbar Base */
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+    transition: width 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar:hover {
+    width: var(--scrollbar-width-hover);
+  }
+  
+  /* Track Styling */
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 215, 0, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(218, 165, 32, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Thumb Base */
+  ::-webkit-scrollbar-thumb {
+    background: var(--vip-gradient-normal);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    min-height: var(--scrollbar-min-height);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--vip-glow);
+  }
+  
+  /* Hover State */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--vip-gradient-hover);
+    box-shadow: var(--vip-glow-hover);
+    border-width: 1.5px;
+  }
+  
+  /* Active State */
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--vip-gradient-active);
+    border-width: 1px;
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+    border-radius: 0 0 10px 0;
+  }
+  
+  /* Firefox Compatibility */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--vip-gold-medium) rgba(255, 215, 0, 0.03);
+  }
+  
+  /* Custom Scrollbar Classes */
+  .custom-scrollbar {
+    scroll-behavior: smooth;
+    overflow: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
+    background: var(--vip-gradient-hover);
+  }
+  
+  /* Fade Effect for Scrollbar */
+  .custom-scrollbar:not(:hover):not(.scrolling)::-webkit-scrollbar-thumb {
+    opacity: 0.7;
+  }
+  
+  /* Dark Mode Enhancements */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --vip-glow: 0 0 15px rgba(255, 215, 0, 0.4);
+      --vip-glow-hover: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+  
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 215, 0, 0.05);
+      border-color: rgba(218, 165, 32, 0.15);
+    }
+  }
+  
+  /* High DPI Screens */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    :root {
+      --scrollbar-width: 10px;
+      --scrollbar-width-hover: 12px;
+    }
+  }
+  
+  /* Mobile/Touch Optimization */
+  @media (hover: none) {
+    ::-webkit-scrollbar {
+      width: var(--scrollbar-width-hover);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--vip-gradient-normal);
+      border-width: 1.5px;
+    }
+  }

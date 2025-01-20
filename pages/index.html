@@ -1,0 +1,283 @@
+<!--
+ *
+ * Title:       Twitter Clone
+ * Version:     1.0.0
+ * Author:      Paulo Muniz
+ * GitHub:      https://github.com/paulomunizdev/twitter-clone
+ * 
+ * Description: A responsive Twitter clone built with HTML, CSS and JavaScript.
+ *              Features include real-time interactions, VIP system, post boosting,
+ *              user profiles, notifications and Bitcoin integration.
+ * 
+ * License:     MIT License
+ * Copyright:   (c) 2025 Paulo Muniz
+ * 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Twitter - Login or create your account">
+    <title>Authentication - Twitter</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <!-- Logo Section -->
+                    <a href="/" class="brand">
+        <svg class="nav-logo" viewBox="0 0 4160 4160" xmlns="http://www.w3.org/2000/svg">
+            <path transform="translate(4160, 4160) rotate(180)" d="M180 4161 c0 -51 68 -277 110 -363 25 -52 25 -53 -5 -146 -13 -42
+            -29 -106 -35 -142 -15 -96 -12 -292 6 -394 l15 -88 -59 -62 c-32 -33 -72 -86
+            -89 -116 -125 -219 -148 -644 -58 -1049 44 -201 79 -309 225 -711 59 -162 142
+            -398 184 -524 82 -247 174 -452 226 -504 44 -45 74 -42 125 11 47 50 128 170
+            201 299 27 49 53 88 57 88 5 0 8 -44 7 -97 -2 -128 -2 -123 14 -123 40 0 191
+            208 316 435 252 460 447 983 505 1360 25 158 30 373 12 490 -31 201 -91 334
+            -200 448 l-58 61 10 79 c28 210 3 454 -60 579 l-28 56 34 75 c56 122 97 329
+            63 314 -7 -3 -54 -24 -105 -47 -104 -46 -244 -84 -365 -100 -183 -23 -580 -7
+            -720 29 -74 19 -184 68 -280 125 -27 15 -48 23 -48 17z m399 -587 c39 -34 40
+            -37 26 -57 -52 -74 42 -159 104 -93 l22 24 52 -21 c29 -12 54 -23 56 -24 9 -6
+            -36 -46 -71 -64 -42 -21 -130 -25 -175 -8 -73 27 -123 117 -123 220 0 36 3 68
+            6 72 11 10 61 -14 103 -49z m882 24 c5 -93 -10 -155 -49 -207 -66 -89 -222
+            -93 -301 -8 -23 25 -23 27 -5 32 10 4 37 13 58 21 37 13 40 13 64 -11 60 -61
+            143 3 106 81 -20 41 -13 52 55 96 58 36 71 36 72 -4z m-440 -327 c27 -26 49
+            -57 49 -67 0 -21 -100 -204 -112 -204 -9 0 -108 186 -108 204 0 20 91 116 110
+            116 7 0 35 -22 61 -49z"/>
+        </svg>
+    </a>
+    
+                    
+    
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="auth-container" role="main">
+        <div class="auth-main">
+            <div class="auth-card">
+                <!-- Auth Header -->
+                <div class="auth-header">
+                    <h1 class="auth-title">Welcome to Twitter</h1>
+                    <p class="auth-subtitle">Join our community today!</p>
+                </div>
+
+                <!-- Auth Tabs -->
+                <div class="auth-tabs" role="tablist" aria-label="Authentication forms">
+                    <button 
+                        class="auth-tab active" 
+                        id="login-tab"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="login-form"
+                        data-form="login">
+                        Log in
+                    </button>
+                    <button 
+                        class="auth-tab" 
+                        id="signup-tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="signup-form"
+                        data-form="signup">
+                        Sign up
+                    </button>
+                </div>
+
+                <!-- Auth Forms Container -->
+                <div class="auth-forms-container">
+                    <!-- Login Form -->
+                    <form 
+                        id="loginForm" 
+                        class="auth-form active" 
+                        role="tabpanel"
+                        aria-labelledby="login-tab"
+                        novalidate>
+                        
+                        <div class="form-group">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input 
+                                type="email" 
+                                id="loginEmail" 
+                                name="email" 
+                                class="form-input" 
+                                autocomplete="email"
+                                placeholder="Enter your email"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <div class="password-input-group">
+                                <input 
+                                    type="password" 
+                                    id="loginPassword" 
+                                    name="password" 
+                                    class="form-input" 
+                                    autocomplete="current-password"
+                                    placeholder="Enter your password"
+                                    required
+                                    aria-required="true"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle"
+                                    aria-label="Toggle password visibility">
+                                    <i class="far fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="remember-me">
+                                <input 
+                                    type="checkbox" 
+                                    name="remember" 
+                                    id="loginRemember"
+                                >
+                                <span>Remember me</span>
+                            </label>
+                            <a href="/forgot-password" class="forgot-password">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-content">Log in</span>
+                            <span class="loading-indicator" aria-hidden="true"></span>
+                        </button>
+                    </form>
+
+                    <!-- Signup Form -->
+                    <form 
+                        id="signupForm" 
+                        class="auth-form" 
+                        role="tabpanel"
+                        aria-labelledby="signup-tab"
+                        novalidate>
+                        
+                        <div class="form-group">
+                            <label for="signupName" class="form-label">Full name</label>
+                            <input 
+                                type="text" 
+                                id="signupName" 
+                                name="name" 
+                                class="form-input" 
+                                autocomplete="name"
+                                placeholder="Enter your full name"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input 
+                                type="email" 
+                                id="signupEmail" 
+                                name="email" 
+                                class="form-input" 
+                                autocomplete="email"
+                                placeholder="Enter your email"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <div class="password-input-group">
+                                <input 
+                                    type="password" 
+                                    id="signupPassword" 
+                                    name="password" 
+                                    class="form-input" 
+                                    autocomplete="new-password"
+                                    placeholder="Create a password"
+                                    required
+                                    aria-required="true"
+                                    pattern=".{8,}"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle"
+                                    aria-label="Toggle password visibility">
+                                    <i class="far fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupConfirmPassword" class="form-label">Confirm password</label>
+                            <div class="password-input-group">
+                                <input 
+                                    type="password" 
+                                    id="signupConfirmPassword" 
+                                    name="confirmPassword" 
+                                    class="form-input" 
+                                    autocomplete="new-password"
+                                    placeholder="Confirm your password"
+                                    required
+                                    aria-required="true"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle"
+                                    aria-label="Toggle password visibility">
+                                    <i class="far fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group terms">
+                            <label class="checkbox-label">
+                                <input 
+                                    type="checkbox" 
+                                    name="terms" 
+                                    id="signupTerms"
+                                    required
+                                    aria-required="true"
+                                >
+                                <span>
+                                    I agree to the 
+                                    <a href="/terms" target="_blank">Terms of Service</a> 
+                                    and 
+                                    <a href="/privacy" target="_blank">Privacy Policy</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Create account
+                            <span class="loading-indicator" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/auth.js" defer></script>
+</body>
+</html>
